@@ -1,4 +1,4 @@
-# MNIST Digit Classification — Neural Network Hyperparameter Study
+# MNIST Digit Classification: Neural Network Hyperparameter Study
 
 A systematic comparison of feedforward neural network configurations for handwritten digit classification using the [MNIST dataset](http://yann.lecun.com/exdb/mnist/). The goal was to isolate the effect of key hyperparameters on model performance through controlled experiments.
 
@@ -19,7 +19,7 @@ All models use a sequential feedforward architecture:
 
 | Layer | Units | Activation |
 |-------|-------|------------|
-| Input | 784 | — |
+| Input | 784 | n/a |
 | Hidden 1 | 128 | ReLU or Tanh |
 | Hidden 2 | 64 | ReLU or Tanh |
 | Hidden 3 | 32 | ReLU or Tanh |
@@ -33,7 +33,7 @@ Input images (28×28 grayscale) are normalized to [0, 1] and flattened to 784-di
 - **Adam required a lower learning rate** (0.001 vs. 0.01) to converge reliably, particularly with Tanh
 - **Batch size 64** provided the best trade-off between gradient stability and training speed
 - **L2 regularization** (rate=0.001) reduced overfitting with minimal accuracy cost; combining it with early stopping offered no additional benefit for this architecture
-- **Best model:** ReLU + SGD (lr=0.01, batch=64) — **97.18% test accuracy**
+- **Best model:** ReLU + SGD (lr=0.01, batch=64), **97.18% test accuracy**
 
 ## Project Structure
 
